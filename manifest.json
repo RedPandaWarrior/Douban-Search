@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "搜索电影/图书",
+  "version": "1.0.0",
+  "description": "选中文字后右键：在豆瓣电影/豆瓣读书中搜索，在图书详情页附加zlib和anna搜索pdf资源", 
+  "permissions": ["contextMenus", "tabs"],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+        "matches": ["https://book.douban.com/subject/*"],
+        "js": ["search.js"],
+        "css": ["search.css"],
+        "run_at": "document_end"
+    }]
+  
+}
