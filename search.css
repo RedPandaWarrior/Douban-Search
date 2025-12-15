@@ -1,4 +1,6 @@
-.search-select-box{
+.site-select-box,
+.lang-select-box
+{
     text-align: center;
     height: 25px;
     /* border: 1px dotted black; */

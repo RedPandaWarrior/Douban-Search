@@ -23,12 +23,9 @@ chrome.contextMenus.onClicked.addListener((info) => {
   const encoded = encodeURIComponent(name);
 
   let url = null;
-  let type = '';
   if (info.menuItemId === MENU_MOVIE) {
-    type = 'movie';
     url = `https://search.douban.com/movie/subject_search?search_text=${encoded}&cat=1002`;
   } else if (info.menuItemId === MENU_BOOK) {
-    type = 'book';
     url = `https://search.douban.com/book/subject_search?search_text=${encoded}&cat=1001`;
   }
 

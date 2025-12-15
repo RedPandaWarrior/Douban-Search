@@ -11,7 +11,10 @@
     "service_worker": "background.js"
   },
   "content_scripts": [{
-        "matches": ["https://book.douban.com/subject/*"],
+        "matches": [
+          "https://book.douban.com/subject/*",
+          "https://movie.douban.com/subject/*"
+        ],
         "js": ["search.js"],
         "css": ["search.css"],
         "run_at": "document_end"
